@@ -36,3 +36,16 @@ model.fit(x_train, y_train, epochs=5)
 evaluate
 """
 model.evaluate(x_test, y_test, verbose=2)
+
+"""
+export saved model
+"""
+export_path = 'mnist_saved_model'
+# simple_save doesn't work on eager mode.
+tf.compat.v1.disable_eager_execution()
+tf.compat.v1.saved_model.simple_save(
+    tf.compat.v1.keras.backend.get_session(),
+    export_path,
+    inputs = {'input_image': model.input},
+    outputs = {t.name:t for t in model.outputs}
+)
