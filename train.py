@@ -40,4 +40,4 @@ model.evaluate(x_test, y_test, verbose=2)
 """
 export saved model
 """
-tf.saved_model.save(model, 'saved/1')
+tf.saved_model.save(model, 'mnist/1')
