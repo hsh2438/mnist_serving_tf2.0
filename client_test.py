@@ -4,7 +4,7 @@ from PIL import Image
 import numpy as np
 
 test_image = Image.open('test_image.jpg')
-pixels = np.array(test_image)
+pixels = np.array(test_image)/255.0
 
 address = 'http://localhost:8501/v1/models/mnist:predict'
 data = json.dumps({'instances':pixels.tolist()})
