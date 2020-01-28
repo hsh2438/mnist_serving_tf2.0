@@ -9,6 +9,7 @@ python3 train.py
 
 ### install docker
 You can download docker from below.
+
 https://docs.docker.com/install/
 
 ### serving using docker
@@ -22,3 +23,6 @@ You can test rest api.
 ```
 python3 client_test.py
 ```
+
+
+https://seokhyun2.tistory.com/39
